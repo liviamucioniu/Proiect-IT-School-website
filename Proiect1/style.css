@@ -1,0 +1,424 @@
+body{
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary: #141e4c;
+  --text-primary: #101d42;
+  --bg-dark: #101d42;
+  --secondary: #fbb44c; 
+  --button-color: #2bb686;
+  --spacing-xs: 0.625rem;
+  --spacing-s: 1.25rem;
+  --spacing-m: 18.75rem;
+  --spacing-l: 25rem;
+  --spacing-xl: 32.5rem;
+  --spacing-media: 2rem;
+}
+
+
+.container {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "navigation navigation navigation"
+    "bine-ai-venit bine-ai-venit bine-ai-venit"
+    "calendar-cursuri calendar-cursuri calendar-cursuri"
+    "cine-suntem cine-suntem cine-suntem"
+    "parteneri parteneri parteneri"
+    "footer footer footer";
+    background-color: var(--primary);
+    height: 100vh;
+}
+
+.navigation { grid-area: navigation;
+  background-color: var(--primary);
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding-top: var(--spacing-xs);
+  padding-bottom: var(--spacing-s);
+  justify-content: space-around;
+  padding-left: 12.5rem;
+}
+  
+  .navigation .material-symbols-outlined {
+    position: absolute;
+    box-sizing: border-box;
+    font-size: medium;
+    
+  }
+  
+  #logo {
+    margin-left: var(--spacing-m);
+    margin-right: 37.5rem;
+    padding: 0.188rem;                      
+    width: 8.125rem;
+    height: 2.813rem;
+
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+    align-content: flex-end;
+    list-style: none;
+    justify-content: space-evenly;
+    margin-right: var(--spacing-l);
+    font-size: var(--spacing-xs);
+  }
+
+  a {
+    font-size: 0.563rem;
+    padding: 1rem;
+    text-decoration: none;
+    color: white;
+  }
+
+  
+  ul a:hover {
+    color: var(--secondary);
+  }
+
+  .about-us {
+    float: left;
+    overflow: hidden;
+  }
+
+  .about-us:hover {
+    background-color: var(--primary);
+  
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    background-color: var(--primary);
+    min-width: 10rem;
+    z-index: 1;
+  }
+  
+  .submenu a {
+    float: none;
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+
+  .submenu a:hover {
+    color: var(--secondary)
+  }
+
+  .about-us:hover .submenu {
+    display: block;
+  }
+  
+  
+
+.bine-ai-venit { grid-area: bine-ai-venit; 
+  background-color: var(--primary);
+  height: 100vh;
+}
+
+h1 { color: white;
+  
+  font-size: xxx-large;
+  padding-top: 13.75rem;
+  margin-bottom: 0.063rem;
+  font-weight: 800;
+  margin-top: 9.375rem;
+  margin-left: var(--spacing-xl);
+}
+
+.bine-ai-venit p {
+  color: white;
+  margin-top: 0;
+  margin-left: var(--spacing-l);
+  margin-left: var(--spacing-xl);
+}
+
+.img-parteneri { 
+ 
+  height: var(--spacing-s);
+
+}
+
+#p2 {
+  color: white;
+  margin-left: var(--spacing-m);
+  padding-right: var(--spacing-s);
+  margin-left: var(--spacing-xl);
+
+}
+
+.bine-ai-venit button {
+  margin-top: 1.563rem;
+  padding: 0.938rem;
+  width: 13rem;
+  border-radius: 0.5rem;
+  background-color:var(--button-color) ;
+  color: white;
+  border: 1px solid var(--button-color);
+  margin-left: 31.25rem;
+}
+
+button:hover {
+  background-color: var(--primary);
+  color: white
+}
+
+.calendar-cursuri {
+  grid-area: calendar-cursuri; 
+  height: 21.875rem;
+  width: var(--spacing-m);
+  margin-left: 51.25rem;
+  margin-top: var(--spacing-s);
+  
+}
+
+.cine-suntem { grid-area: cine-suntem;
+background-color: #dfedf5;
+min-height: 40rem;
+}
+
+.cine-suntem h2{
+  color: var(--text-primary);
+  padding-left: 51.875rem;
+}
+
+.cine-suntem p {
+  text-align: center; 
+  font-size: 0.75rem;
+  margin-right: 28.75rem;
+  margin-left: 28.75rem;
+
+}
+
+#imagini {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 62.5rem;
+  margin-left: 28rem;
+}
+
+#imagini img{
+  height: 12.5rem;
+    width: var(--spacing-m);
+}
+
+.parteneri { grid-area: parteneri; 
+ width: 31.25rem;
+ min-height: 18rem
+}
+
+.parteneri h2 {
+color: var(--text-primary);
+text-align: center;
+margin-left: 53.125rem;
+font-weight: revert;
+}
+
+.parteneri img{
+  height: 4.375rem;
+  width: 5.625rem;
+  margin-right: 5rem;
+
+}
+
+.parteneri-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 62.5rem;
+  margin-left: 27.5rem;
+}
+
+.img-hover {
+  filter: grayscale(100%);
+  transition: filter 0.2s ease;
+}
+
+.img-hover:hover {
+  filter: grayscale(0%);
+}
+
+
+.container2 {  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  gap: 0.625rem 0.75rem;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "python webdev introducere"
+    "cplus java graphic"
+    ". . .";
+    padding-right: 56.25rem;
+    margin-right: 50rem;
+    margin-left: 7.5rem;
+    /* display: flex; */
+    justify-content: center;
+}
+
+#h2-calendar {
+  color: var(--text-primary);
+}
+
+.python { grid-area: python; }
+
+.webdev { grid-area: webdev; }
+
+.introducere { grid-area: introducere; }
+
+.cplus { grid-area: cplus; }
+
+.java { grid-area: java; }
+
+.graphic { grid-area: graphic; }
+
+
+.calandar-card {
+  /* width: 100%; */
+    border: 1px solid #ddd;
+    border-radius: 0.313rem;
+    height: 6.25rem;
+    width: var(--spacing-m);
+}
+
+
+.continut h3{
+  font-weight: 400;
+  font-size: var(--spacing-s);
+  color: var(--primary);
+  margin-top: 0.188rem;
+}
+
+
+#today-span .material-symbols-outlined{
+
+  font-size: 0.813rem;
+  margin-left: var(--spacing-xs);
+  margin-right: 0.188rem;
+}
+
+#today-span {
+  font-size :0.75rem;
+  
+}
+
+#location-span .material-symbols-outlined{
+
+  font-size: 0.813rem;
+  margin-left: var(--spacing-xs);
+  margin-right: 0.188rem;
+}
+
+#location-span {
+  font-size: 0.75rem;
+  background-color: var(--secondary);
+  padding-right: var(--spacing-xs);
+  margin-left: 0.125rem;
+}
+
+.bar {
+
+  background-color: var(--button-color);
+  border-radius: var(--spacing-xs);
+  height: 0.25rem;
+  margin-top: 0.938rem;
+}
+
+.footer { 
+  grid-area: footer;
+  background-color: var(--bg-dark);
+  color: #ddd;
+  text-align: center;
+  font-size: var(--spacing-xs);
+  height: 3.125rem;
+  padding-top: var(--spacing-xs);
+  }
+
+
+  @media (max-width: 768px) {
+     
+    .navigation {
+      display: block;
+    }
+
+    h1 {
+     font-size: xx-large; 
+     margin-left: var(--spacing-media);
+    }
+
+    #p2{
+      margin-left: var(--spacing-media);
+    }
+    .bine-ai-venit{
+      height: 100%;
+      width: 100%; 
+    }
+  
+    .bine-ai-venit p {
+      margin-left: var(--spacing-media);
+    }
+
+    .bine-ai-venit button {
+      margin-left: var(--spacing-media);
+    }
+    .cine-suntem{
+      height: fit-content;
+    }
+
+    .cine-suntem p {
+      margin-left: 1px;
+      margin-right: 1px;
+
+    }
+    .cine-suntem h2{
+      padding-left: 200px;
+      font-size: medium;
+    }
+
+   .calendar-cursuri{
+   margin-left: 20px;
+   min-height: 1000px;
+   display: flex;
+   flex-wrap: wrap;
+
+   }
+
+   .container2{
+    display: block;
+    margin-top: 300px;
+   }
+
+   #imagini{
+    margin-left: 100px;
+    padding-left: 40px;
+    display: block;
+   }
+
+   .parteneri-container{
+    margin-top: 800px;
+    display: block;
+    margin-left: 220px;
+   }
+   
+   .parteneri h2{
+    display: none;
+    margin-left: 0px;
+    padding-left: 0px;
+
+   }
+   .footer{
+    margin-top: 1300px;
+   }
+  }
+
+  

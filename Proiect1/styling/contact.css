@@ -1,0 +1,255 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+:root {
+  --primary: #141e4c;
+  --text-primary: #101d42;
+  --bg-dark: #101d42;
+  --secondary: #fbb44c;
+  --button-color: #2bb686;
+  --spacing-xs: 0.625rem;
+  --spacing-s: 1.25rem;
+  --spacing-m: 18.75rem;
+  --spacing-l: 25rem;
+  --spacing-xl: 32.5rem;
+  --spacing-o: 1rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.4fr 1.6fr 1.6fr 0.4fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "nav nav nav"
+    "contact contact contact"
+    "info-contact info-contact info-contact"
+    "footer footer footer";
+}
+
+.nav {
+  grid-area: nav;
+}
+
+.navigation {
+  grid-area: navigation;
+  background-color: var(--primary);
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding-top: var(--spacing-xs); 
+  padding-bottom: var(--spacing-s); 
+  justify-content: space-around;
+  padding-left: 12.5rem; 
+}
+
+.navigation .material-symbols-outlined {
+  position: absolute;
+  box-sizing: border-box;
+  font-size: var(--spacing-o); 
+}
+
+#logo {
+  margin-left: var(--spacing-m); 
+  margin-right: 37.5rem; 
+  padding: 0.2rem; 
+  width: 8.125rem; 
+  height: 2.8rem; 
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  align-content: flex-end;
+  list-style: none;
+  justify-content: space-evenly;
+  margin-right: var(--spacing-l); 
+  font-size: var(--spacing-xs); 
+}
+
+a {
+  font-size: 0.5625rem; 
+  padding: var(--spacing-o); 
+  text-decoration: none;
+  color: white;
+}
+
+ul a:hover {
+  color: var(--secondary);
+}
+
+.about-us {
+  float: left;
+  overflow: hidden;
+}
+
+.about-us:hover {
+  background-color: var(--primary);
+}
+
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: var(--primary);
+  min-width: 10rem; 
+  z-index: 1;
+}
+
+.submenu a {
+  float: none;
+  color: white;
+  display: block;
+  text-align: left;
+}
+
+.submenu a:hover {
+  color: var(--secondary);
+}
+
+.about-us:hover .submenu {
+  display: block;
+}
+
+.contact {
+  grid-area: welcome;
+  width: 100%;
+  height: 22.8rem; 
+  background-color: var(--primary);
+  padding-top: 6.25rem; 
+  
+}
+
+h1 {
+  color: white;
+  font-size: 2.5rem; 
+  margin-bottom: 1.5rem; 
+  text-align: center;
+  margin-top: 6.25rem; 
+}
+
+.info-contact {
+  max-width: 75rem; 
+  min-width: 20rem; 
+  margin: auto;
+  padding: var(--spacing-o);
+}
+
+.info-contact h2 {
+  color: var(--text-primary);
+  text-align: center;
+  margin-bottom: var(--spacing-o); 
+  font-size: var(--spacing-s); 
+  margin-top: 12.5rem; 
+  font-weight: 900;
+}
+
+.paragraf-central {
+  font-size: 0.6875rem; 
+  padding-left: 11.25rem; 
+  padding-right: 11.25rem; 
+}
+
+.contact-wrapper {
+  display: flex;
+}
+
+.info-contact ul {
+  display: flex;
+  flex-direction: column;
+  margin-right: var(--spacing-s);
+  margin-left: 9rem; 
+  height: 15rem; 
+}
+
+.info-contact li {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #ddd;
+}
+
+.info-contact a {
+  color: #8e8e8e;
+  padding-left: 13.75rem; 
+}
+
+span.material-symbols-outlined {
+  vertical-align: middle;
+  font-size: var(--spacing-o); 
+  padding-right: 0.125rem; 
+}
+
+.fa-brands {
+  font-size: var(--spacing-o); 
+  padding-right: 0.25rem; 
+}
+
+.fb-icon {
+  padding-right: var(--spacing-s); 
+}
+
+span .centrare-program {
+  padding-right: 0.1875rem; 
+  margin-top: -0.1875rem; 
+}
+
+.program {
+  padding-left: 10rem; 
+  color: #8e8e8e;
+}
+
+.sediu {
+  padding-left: 15rem; 
+  color: #8e8e8e;
+}
+
+form {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 0.15rem; 
+  font-size: 0.75rem;
+  color: #2b2922;
+}
+
+input {
+  font-size: 0.6875rem; 
+  border: 1px solid #ddd;
+  border-radius: 0.3125rem; 
+  padding: 0.5rem; 
+}
+
+textarea {
+  font-family: inherit;
+  height: 6.25rem; 
+  border: 1px solid #ddd;
+  border-radius: 0.3125rem; 
+}
+
+input[type="submit"] {
+  font-size: 0.75rem; 
+  text-align: center;
+  color: white;
+  background-color: var(--button-color);
+  border: 1px solid var(--button-color);
+  border-radius: 0.3rem; 
+  margin-top: var(--spacing-xs); 
+  width: 6.25rem; 
+  height: 1.875rem; 
+}
+
+.footer {
+  grid-area: footer;
+  background-color: var(--bg-dark);
+  color: #ddd;
+  text-align: center;
+  font-size: var(--spacing-xs); 
+  height: 3.125rem; 
+  padding-top: var(--spacing-xs); 
+  margin-top: 35rem; 
+}
